@@ -6,7 +6,8 @@ export default function Itens() {
     return (
         <div className={style.itens}>
             {cardapio.map(item => (
-                <Item key={item.id}/>
+                <Item key={item.id}
+                {...item}/>
             ))}
         </div>
     )
