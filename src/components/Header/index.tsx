@@ -1,5 +1,6 @@
 import style from './Header.module.scss';
 import { Outlet } from 'react-router-dom';
+import styleTema from 'styles/Tema.module.scss'; 
 
 export default function Header() {
     return ( <>
@@ -8,7 +9,7 @@ export default function Header() {
                 A casa do codigo e da massa
             </div>
          </header>
-         <div>
+         <div className={styleTema.container}>
              <Outlet/>
          </div>
     </>

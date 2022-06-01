@@ -6,6 +6,7 @@ import Filtros from './Filtros';
 import Ordenador from './Ordenador';
 import Itens from './Itens';
 import Menu from 'components/Menu';
+import styleTema from 'styles/Tema.module.scss'; 
 
 export default function Cardapio() {
 
@@ -15,7 +16,7 @@ export default function Cardapio() {
 
     return <>
         <section className={style.cardapio}>
-            <h3 className={style.cardapio__titulo}>Cardápio</h3>
+            <h3 className={styleTema.titulo}>Cardápio</h3>
             <Buscador busca={busca} setBusca={setBusca} />
             <div className={style.cardapio__filtros}>
                 <Filtros filtro={filtro} setFiltro={setFiltro}/>
