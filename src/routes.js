@@ -6,6 +6,7 @@ import NotFound from 'pages/NotFound/Index';
 import Sobre from 'pages/Sobre/Index';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Menu from './components/Menu';
+import Prato from 'pages/Prato';
 
 export default function AppRouter() {
     return (
@@ -19,6 +20,7 @@ export default function AppRouter() {
                         <Route path='sobre' element={<Sobre/>}></Route>
                     </Route>
                     <Route path='*' element={<NotFound/>}/>
+                    <Route path='/prato/:id' element={<Prato/>}/>
                 </Routes>
                 <Footer/>
             </Router>
