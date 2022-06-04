@@ -3,6 +3,7 @@ import { useLocation, useParams, useNavigate} from 'react-router-dom';
 import classNames from 'classnames';
 import cardapio from 'data/itens.json';
 import NotFound from 'pages/NotFound/Index';
+import Header from 'components/Header';
 
 export default function Prato() {
     const { id } = useParams();
@@ -14,7 +15,7 @@ export default function Prato() {
     }
 
     return (
-        <>
+        <Header>
             <button className={style.voltar} onClick={() => navigate(-1)}>{'< Voltar'}</button>
             <section className={style.container}>
                 <h1 className={style.titulo}>
@@ -46,6 +47,6 @@ export default function Prato() {
                     </div>
                 </div>
             </section>
-        </>
+        </Header>
     );
 }
